@@ -1,24 +1,14 @@
-﻿Public Class Login
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+﻿Public Class FormLogin
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
-    End Sub
+        If tbUsername.Text = "admin" And tbPassword.Text = "admin123" Then
+            Me.Hide()
+            MainApp.Show()
+        ElseIf tbUsername.Text = "" Or tbPassword.Text = "" Then
+            MsgBox("Tolong Isi Username & Password Terlebih Dahulu")
+        Else
+            MsgBox("Username & Password Yang Anda Masukkan Salah")
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Hide()
-        MainApp.Show()
-
-
+        End If
     End Sub
 End Class
